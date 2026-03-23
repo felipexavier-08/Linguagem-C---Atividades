@@ -98,23 +98,23 @@ int main(){
     scanf("%d", &atributo);
 
     if(atributo == 1){
-        nomeAtributo = "População";
+        //nomeAtributo = "População";
     }
     else if(atributo == 2){
-        nomeAtributo = "Área";
+        //nomeAtributo = "Área";
     }
     else if (atributo == 3){
-        nomeAtributo = "PIB";
+        ///nomeAtributo = "PIB";
     }
     else if(atributo == 4){
-        nomeAtributo = "Nº de Pontos Turísticos";
+        //nomeAtributo = "Nº de Pontos Turísticos";
     }
     else if(atributo == 5){
-        nomeAtributo = "Densidade Demográfica";
+        //nomeAtributo = "Densidade Demográfica";
     }
     else{
         printf("Opção inválida !!!");
-        break;
+    
     }
 
 
@@ -123,30 +123,38 @@ int main(){
     switch(atributo){
 
         case 1 :
+
+                printf("População da carta 1: %d\n", populacao1);
+                printf("População da carta 2: %d\n", populacao2);
+
             if(populacao1 > populacao2){
-                printf("População da carta 1");
+                printf("Carta 1 Venceu !!!");
+            }
+            else if(populacao1 == populacao2){
+                printf("Empate!!!");
             }
             else{
-                printf("População");
+                printf("Carta 2 Venceu !!!");
             }
         break;
 
         case 2:
 
+            printf("Área da carta 1: %.2f\n", area1);
+            printf("Área da carta 2: %.2f\n", area2);
 
-    }
+            if(area1 > area2){
+                printf("Carta 1 Venceu !!!");
+            }
+            else if(area1 == area2){
+                printf("Empate!!!");
+            }
+            else{
+                printf("Carta 1 Venceu !!!");
+            }
 
-    printf("Carta 1 - %s (%s): R$%.3f\n", nomeCidade1, estado1, pibPerCapta1);
+        break;
 
-    printf("Carta 2 - %s (%s): R$%.3f\n", nomeCidade2, estado2, pibPerCapta2);
-
-    if(pibPerCapta1 > pibPerCapta2){
-
-        printf("A carta 1 Venceu com PIB Per Capta de: R$ %.2f\n", pibPerCapta1);
-
-    }else{
-
-        printf("A carta 2 Venceu com PIB Per Capta de: R$ %.2f\n", pibPerCapta2);
 
     }
 
